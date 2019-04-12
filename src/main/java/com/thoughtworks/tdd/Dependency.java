@@ -6,6 +6,6 @@ public class Dependency {
     }
 
     public String fizzBuzz(Integer i) {
-        return "1";
+        return i.toString();
     }
 }
