@@ -6,6 +6,10 @@ public class Dependency {
     }
 
     public String fizzBuzz(Integer i) {
-        return i.toString();
+        if (i == 3) {
+            return "Fizz";
+        } else {
+            return i.toString();
+        }
     }
 }
