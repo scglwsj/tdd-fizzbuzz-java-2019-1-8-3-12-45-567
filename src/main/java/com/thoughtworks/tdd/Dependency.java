@@ -10,6 +10,8 @@ public class Dependency {
             return "Fizz";
         } else if (i == 5) {
             return "Buzz";
+        } else if (i == 7) {
+            return "Whizz";
         } else {
             return i.toString();
         }
