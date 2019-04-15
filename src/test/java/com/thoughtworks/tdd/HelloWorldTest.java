@@ -1,7 +1,5 @@
 package com.thoughtworks.tdd;
 
-import com.thoughtworks.tdd.Dependency;
-import com.thoughtworks.tdd.HelloWorld;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -13,7 +11,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 
-public class HelloWorldTest {
+class HelloWorldTest {
 
     @BeforeAll
     static void initTestEnv() {
@@ -26,7 +24,7 @@ public class HelloWorldTest {
 
     @Test
     @DisplayName("try display name")
-    public void hello_world_test() {
+    void hello_world_test() {
         //given
         Dependency dependency = new Dependency();
         HelloWorld helloWorld = new HelloWorld(dependency);
@@ -39,7 +37,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void should_be_mocked() {
+    void should_be_mocked() {
         //given
         Dependency dependency = mock(Dependency.class);
         when(dependency.say()).thenReturn("Hello World");
@@ -53,7 +51,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_1_when_give_1() {
+    void fizzBuzz_should_return_1_when_give_1() {
         //given
         Dependency dependency = new Dependency();
 
@@ -65,7 +63,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_2_when_give_2() {
+    void fizzBuzz_should_return_2_when_give_2() {
         //given
         Dependency dependency = new Dependency();
 
@@ -77,7 +75,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_Fizz_when_give_3() {
+    void fizzBuzz_should_return_Fizz_when_give_3() {
         //given
         Dependency dependency = new Dependency();
 
@@ -89,7 +87,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_4_when_give_4() {
+    void fizzBuzz_should_return_4_when_give_4() {
         //given
         Dependency dependency = new Dependency();
 
@@ -101,7 +99,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_Buzz_when_give_5() {
+    void fizzBuzz_should_return_Buzz_when_give_5() {
         //given
         Dependency dependency = new Dependency();
 
@@ -113,7 +111,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_Fizz_when_give_6() {
+    void fizzBuzz_should_return_Fizz_when_give_6() {
         //given
         Dependency dependency = new Dependency();
 
@@ -125,7 +123,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_Whizz_when_give_7() {
+    void fizzBuzz_should_return_Whizz_when_give_7() {
         //given
         Dependency dependency = new Dependency();
 
@@ -137,7 +135,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_Buzz_when_give_10() {
+    void fizzBuzz_should_return_Buzz_when_give_10() {
         //given
         Dependency dependency = new Dependency();
 
@@ -149,7 +147,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_Whizz_when_give_14() {
+    void fizzBuzz_should_return_Whizz_when_give_14() {
         //given
         Dependency dependency = new Dependency();
 
@@ -161,7 +159,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_FizzBuzz_when_give_15() {
+    void fizzBuzz_should_return_FizzBuzz_when_give_15() {
         //given
         Dependency dependency = new Dependency();
 
@@ -173,7 +171,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_FizzWhizz_when_give_21() {
+    void fizzBuzz_should_return_FizzWhizz_when_give_21() {
         //given
         Dependency dependency = new Dependency();
 
@@ -185,7 +183,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_BuzzWhizz_when_give_35() {
+    void fizzBuzz_should_return_BuzzWhizz_when_give_35() {
         //given
         Dependency dependency = new Dependency();
 
@@ -197,7 +195,7 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void fizzBuzz_should_return_FizzBuzzWhizz_when_give_105() {
+    void fizzBuzz_should_return_FizzBuzzWhizz_when_give_105() {
         //given
         Dependency dependency = new Dependency();
 
