@@ -10,6 +10,8 @@ public class Dependency {
             return "FizzBuzz";
         } else if (i % 3 == 0 && i % 7 == 0) {
             return "FizzWhizz";
+        } else if (i % 5 == 0 && i % 7 == 0) {
+            return "BuzzWhizz";
         } else if (i % 3 == 0) {
             return "Fizz";
         } else if (i % 5 == 0) {
