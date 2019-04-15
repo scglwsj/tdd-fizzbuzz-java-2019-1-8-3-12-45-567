@@ -5,14 +5,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Dependency {
+    private static FizzManager fizzManager;
+
+    public Dependency() {
+        fizzManager = new FizzManager();
+    }
+
     public String say() {
         return "Leave me alone.";
     }
 
     public String fizzBuzz(Integer i) {
-        FizzManager manager = new FizzManager();
-        String result = manager.getString(i);
-        return result.isEmpty() ? i.toString() : result;
+        return fizzManager.getResult(i);
     }
 }
 
@@ -26,10 +30,11 @@ class FizzManager {
         converters.add(new FizzConverter(7, "Whizz"));
     }
 
-    String getString(Integer i) {
-        return converters.stream()
+    String getResult(Integer i) {
+        String s = converters.stream()
                 .map(converter -> converter.getConverter(i))
                 .collect(Collectors.joining());
+        return s.isEmpty() ? i.toString() : s;
     }
 }
 
