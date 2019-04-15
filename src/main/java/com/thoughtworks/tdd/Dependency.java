@@ -1,5 +1,9 @@
 package com.thoughtworks.tdd;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Dependency {
     public String say() {
         return "Leave me alone.";
@@ -13,20 +17,19 @@ public class Dependency {
 }
 
 class FizzManager {
-    private FizzConverter converter3;
-    private FizzConverter converter5;
-    private FizzConverter converter7;
+    private List<FizzConverter> converters;
 
     FizzManager() {
-        converter3 = new FizzConverter(3, "Fizz");
-        converter5 = new FizzConverter(5, "Buzz");
-        converter7 = new FizzConverter(7, "Whizz");
+        converters = new ArrayList<>();
+        converters.add(new FizzConverter(3, "Fizz"));
+        converters.add(new FizzConverter(5, "Buzz"));
+        converters.add(new FizzConverter(7, "Whizz"));
     }
 
     String getString(Integer i) {
-        return converter3.getConverter(i)
-                + converter5.getConverter(i)
-                + converter7.getConverter(i);
+        return converters.stream()
+                .map(converter -> converter.getConverter(i))
+                .collect(Collectors.joining());
     }
 }
 
