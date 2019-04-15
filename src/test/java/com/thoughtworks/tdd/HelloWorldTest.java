@@ -147,4 +147,16 @@ public class HelloWorldTest {
         //then
         assertThat(out, is("Buzz"));
     }
+
+    @Test
+    public void fizzBuzz_should_return_Whizz_when_give_14() {
+        //given
+        Dependency dependency = new Dependency();
+
+        //when
+        String out = dependency.fizzBuzz(14);
+
+        //then
+        assertThat(out, is("Whizz"));
+    }
 }
